@@ -32,6 +32,10 @@ class Brand {
         self.siteRating=siteRating
         self.logo=logo
         
+        if name.isEmpty || description.isEmpty{
+            return nil
+        }
+        
     }
     
     

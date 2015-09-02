@@ -68,6 +68,9 @@
                     <navigationItem key="navigationItem" title="Rumor" id="sx3-sl-i19">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Onk-sv-USo"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="Onk-sv-USo" id="6LG-Ze-909"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

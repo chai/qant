@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    //MARK: Action
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        self.menuButton.title = NSString(string: "\u{2630} Menu") as String
+        if let font = UIFont(name: "Helvetica", size: 18.0) {
+            self.menuButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
