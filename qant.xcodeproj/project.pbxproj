@@ -14,6 +14,9 @@
 		E6926B191B97445D00A93F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6926B171B97445D00A93F9B /* LaunchScreen.storyboard */; };
 		E6926B241B97445D00A93F9B /* qantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6926B231B97445D00A93F9B /* qantTests.swift */; };
 		E6926B2F1B97445D00A93F9B /* qantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6926B2E1B97445D00A93F9B /* qantUITests.swift */; };
+		E6926B3D1B974DE500A93F9B /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6926B3C1B974DE500A93F9B /* Brand.swift */; settings = {ASSET_TAGS = (); }; };
+		E6926B3E1B974DE500A93F9B /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6926B3C1B974DE500A93F9B /* Brand.swift */; settings = {ASSET_TAGS = (); }; };
+		E6926B3F1B974DE500A93F9B /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6926B3C1B974DE500A93F9B /* Brand.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		E6926B2A1B97445D00A93F9B /* qantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = qantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6926B2E1B97445D00A93F9B /* qantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qantUITests.swift; sourceTree = "<group>"; };
 		E6926B301B97445D00A93F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6926B3C1B974DE500A93F9B /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Brand.swift; path = Model/Brand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		E6926B021B97445D00A93F9B = {
 			isa = PBXGroup;
 			children = (
+				E6926B3C1B974DE500A93F9B /* Brand.swift */,
 				E6926B0D1B97445D00A93F9B /* qant */,
 				E6926B221B97445D00A93F9B /* qantTests */,
 				E6926B2D1B97445D00A93F9B /* qantUITests */,
@@ -255,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6926B3D1B974DE500A93F9B /* Brand.swift in Sources */,
 				E6926B111B97445D00A93F9B /* ViewController.swift in Sources */,
 				E6926B0F1B97445D00A93F9B /* AppDelegate.swift in Sources */,
 			);
@@ -264,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6926B3E1B974DE500A93F9B /* Brand.swift in Sources */,
 				E6926B241B97445D00A93F9B /* qantTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6926B3F1B974DE500A93F9B /* Brand.swift in Sources */,
 				E6926B2F1B97445D00A93F9B /* qantUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
