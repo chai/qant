@@ -40,7 +40,7 @@
                                         <rect key="frame" x="255" y="0.0" width="49" height="30"/>
                                         <state key="normal" title="Brands"/>
                                         <connections>
-                                            <segue destination="0bu-AB-jlP" kind="showDetail" id="JSY-uh-cHl"/>
+                                            <segue destination="xYI-Cc-wwJ" kind="show" id="N9Y-aw-hP8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VOS-pJ-PK7">
@@ -76,52 +76,53 @@
             </objects>
             <point key="canvasLocation" x="479" y="430"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VdL-k0-PUB">
+        <!--Table View Controller-->
+        <scene sceneID="DOI-Gt-5qa">
             <objects>
-                <navigationController id="0bu-AB-jlP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EoM-qi-03k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="crc-Mp-P0k" kind="relationship" relationship="rootViewController" id="N2j-oF-EgS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B3Z-fz-pFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1194" y="429"/>
-        </scene>
-        <!--Brands-->
-        <scene sceneID="kjl-Bx-iwT">
-            <objects>
-                <tableViewController id="crc-Mp-P0k" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O7b-ky-vUs">
+                <tableViewController id="xYI-Cc-wwJ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GbL-LP-6db">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S13-d5-Is6">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BrandTableViewCell" rowHeight="90" id="kkD-DP-Oav" customClass="BrandTableViewCell" customModule="qant" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S13-d5-Is6" id="3cv-fK-nin">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kkD-DP-Oav" id="iLi-CR-bNG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultLogo" translatesAutoresizingMaskIntoConstraints="NO" id="b90-f8-7L9">
+                                            <rect key="frame" x="0.0" y="0.0" width="135" height="90"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPs-4c-6Ba">
+                                            <rect key="frame" x="143" y="8" width="449" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-Kj-c25">
+                                            <rect key="frame" x="143" y="37" width="449" height="45"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="crc-Mp-P0k" id="ihP-e2-Str"/>
-                            <outlet property="delegate" destination="crc-Mp-P0k" id="rOb-Wd-gzh"/>
+                            <outlet property="dataSource" destination="xYI-Cc-wwJ" id="Wdt-oe-9u5"/>
+                            <outlet property="delegate" destination="xYI-Cc-wwJ" id="6cD-JY-mHt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Brands" id="OEf-OT-JXZ">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;&lt;" id="7RZ-Km-IMB"/>
-                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uFp-bf-ddH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWa-va-F74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879" y="430"/>
+            <point key="canvasLocation" x="1209" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultLogo" width="500" height="200"/>
+    </resources>
 </document>
