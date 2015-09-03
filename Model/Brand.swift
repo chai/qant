@@ -38,6 +38,15 @@ class Brand {
         
     }
     
+    init? ()
+    {        self.name="default"
+        
+        self.description="sample description"
+        self.socialPoints=0
+        self.siteRating=0
+        self.logo = UIImage(named : "defaultLogo")
+    }
+    
     
     
     

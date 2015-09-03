@@ -10,6 +10,16 @@ import UIKit
 
 class BrandTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var ratingControl: Clam!
+    
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

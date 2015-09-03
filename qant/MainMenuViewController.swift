@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+//Changed class from ViewController -> MainMenuViewController
+class MainMenuViewController: UIViewController {
 
     
     //MARK: Action

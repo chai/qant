@@ -14,8 +14,22 @@ class Clam: UIView {
     //MARK: Properties
     
     
-    var rating = 0
+    var clamsRating = 0 {
+    
+        didSet {
+            setNeedsLayout()
+        }
+        
+    }
+    
     var clamsButtons = [UIButton]()
+    
+    
+    var buttonSpacing = 5
+    var maximumClams=5
+    
+    
+    
 
     //set clams size to be relative to the frame
     
@@ -30,13 +44,20 @@ class Clam: UIView {
         
 
        
-        for _ in 0..<5 {
+        for _ in 0..<maximumClams {
             let button = UIButton()
-            button.backgroundColor = UIColor.redColor()
+            button.setImage(emptyClam, forState: .Normal)
+            button.setImage(filledClam, forState: .Selected)
+            button.setImage(filledClam, forState: [.Highlighted, .Selected])
+            
+            //Ensure that button doesn't show additional hightlight during transistion of state
+            button.adjustsImageWhenHighlighted = false
+                
             button.addTarget(self, action: "clamButtonTapped:", forControlEvents: .TouchDown)
             clamsButtons += [button]
             addSubview(button)
         }
+        
         
     }
     
@@ -49,10 +70,13 @@ class Clam: UIView {
         
         // Offset each button's origin by the length of the button plus spacing.
         for (index, button) in clamsButtons.enumerate() {
-            buttonFrame.origin.x = CGFloat(index * (buttonSize + 5))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + buttonSpacing))
             button.frame = buttonFrame
         }
         
+        
+        updateButtonSelectionStates()
+
 
     }
     
@@ -62,9 +86,19 @@ class Clam: UIView {
     
     
     func clamButtonTapped(button: UIButton) {
-        print("Button pressed 👍")
+        clamsRating = clamsButtons.indexOf(button)!+1
+        updateButtonSelectionStates()
+        
     }
     
+    
+    
+    func updateButtonSelectionStates(){
+        
+        for (index, button) in clamsButtons.enumerate(){
+        button.selected = index < clamsRating
+        }
+    }
 
     
     

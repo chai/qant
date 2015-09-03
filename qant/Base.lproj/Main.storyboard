@@ -24,7 +24,7 @@
         <!--Rumor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="qant" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainMenuViewController" customModule="qant" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="479" y="430"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Brand Table View Controller-->
         <scene sceneID="DOI-Gt-5qa">
             <objects>
-                <tableViewController id="xYI-Cc-wwJ" sceneMemberID="viewController">
+                <tableViewController id="xYI-Cc-wwJ" customClass="BrandTableViewController" customModule="qant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GbL-LP-6db">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +113,13 @@
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="M8G-Kj-c25" id="5ov-g2-mLH"/>
+                                    <outlet property="logoImage" destination="b90-f8-7L9" id="bIC-k5-FC0"/>
+                                    <outlet property="nameLabel" destination="VPs-4c-6Ba" id="wwH-B5-x3J"/>
+                                    <outlet property="ratingControl" destination="xGE-rr-bzn" id="UzO-dc-4Cg"/>
+                                    <segue destination="vrG-xf-DGm" kind="show" identifier="showBrandDetail" id="9wk-Qb-l9T"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -120,10 +127,71 @@
                             <outlet property="delegate" destination="xYI-Cc-wwJ" id="6cD-JY-mHt"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWa-va-F74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1209" y="429"/>
+        </scene>
+        <!--Brand Detail View Controller-->
+        <scene sceneID="xoa-gH-8NZ">
+            <objects>
+                <viewController id="vrG-xf-DGm" customClass="BrandDetailViewController" customModule="qant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9dT-4D-XL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="sGh-a7-EAK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pAh-ay-ec7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultLogo" translatesAutoresizingMaskIntoConstraints="NO" id="isI-ug-dhK">
+                                <rect key="frame" x="20" y="72" width="294" height="225"/>
+                            </imageView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="200" placeholderIntrinsicHeight="45" translatesAutoresizingMaskIntoConstraints="NO" id="Fjm-53-6dw" customClass="Clam" customModule="qant" customModuleProvider="target">
+                                <rect key="frame" x="20" y="306" width="294" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPD-g2-gdx">
+                                <rect key="frame" x="20" y="388" width="560" height="168"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gbz-oF-mpF">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gbz-oF-mpF" id="AjG-gv-mcH">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECQ-u8-dms">
+                                <rect key="frame" x="20" y="359" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzw-Th-IWT">
+                                <rect key="frame" x="322" y="72" width="258" height="278"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="clamRating" destination="Fjm-53-6dw" id="MQj-l7-3oE"/>
+                        <outlet property="logoImage" destination="isI-ug-dhK" id="dKf-Tc-ODF"/>
+                        <outlet property="nameDescription" destination="Vzw-Th-IWT" id="1Kt-m2-s1o"/>
+                        <outlet property="reviewTableView" destination="iPD-g2-gdx" id="REg-DU-nRT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cll-Uk-hqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="429"/>
         </scene>
     </scenes>
     <resources>
