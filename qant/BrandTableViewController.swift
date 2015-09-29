@@ -145,7 +145,7 @@ loadSampleBrand()
         }
         else
         {
-            print ("hello")
+            print ("hello", terminator: "")
         }
         
         
